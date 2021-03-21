@@ -7,24 +7,21 @@
     <title>Filmes</title>
 
     <style>
-
         body{
             background-color: black;
         }
-
+        
         #videoMP4{
             position: fixed;
             height: 100vh;
             width: 100vw;
         }
-
-
+        
         #marcacao{
            position: absolute;
            top: 50%;
            left: 50%;
-           transform: translate(-50%, -50%);
-           
+           transform: translate(-50%, -50%);     
         }
 
         .formulario{  
@@ -76,26 +73,18 @@
         label{
             color: white;
         }
-
-
-       
-
     </style>
 </head>
 <body>
-
-       
+    
     <header>
         <video id="videoMP4" poster="poster.mp4" autoplay muted loop>
             <source src="video.mp4" type="video/mp4">
         </video>
     </header> 
 
-
-
     <div id="marcacao" method="POST">
-        <form class="formulario">
-        
+        <form class="formulario">        
             <div class="opcoes">
                 <h2>Filmes</h2>
                 <label>Selecione o filme que você deseja assistir:</label></br>
@@ -113,7 +102,7 @@
                     <option></option>
                 </select>    
             </div>
-
+        
             <div class="field">
             <label>Escolha a data que você deseja assistir: </label></br>
                 <input type="date" name="date">
@@ -141,16 +130,8 @@
            </div>
            
             <button onclick="window.alert('Seu filme foi agendado com sucesso!')">Enviar!</button>
-        
-        </form>  
-         
+
+        </form>        
     </div>    
-    
-    
-
-
-
-
-
 </body>
 </html>
