@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+
+    <style>
+
+        body{
+            background-color: black;
+        }
+
+        #videoMP4{
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+        }
+
+
+        #marcacao{
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           
+        }
+
+        .formulario{  
+           border-radius: 10px;
+           display: flex;
+           flex-direction: column;
+           box-shadow: 0 0 90px;
+           text-align: center;
+        }
+
+        .opcoes{
+            margin-bottom: 15px;
+        }
+
+        .field{  
+           padding-left: 20px;
+           padding-right: 20px;
+        }
+
+        h2{
+            color: red;
+            margin-top: 10px;
+        }
+
+        .field input{
+            margin: 5px;
+            border-radius: 30px;
+            padding: 5px;
+            transition: 0.5s ease;
+            outline: none;
+        }
+
+        button{
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: white;
+            border-color: red;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            background-color: red;
+            color: white;
+            transition-duration: 0.5s;
+        }
+
+        label{
+            color: white;
+        }
+
+
+       
+
+    </style>
+</head>
+<body>
+
+       
+    <header>
+        <video id="videoMP4" poster="poster.mp4" autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+    </header> 
+
+
+
+    <div id="marcacao" method="POST">
+        <form class="formulario">
+        
+            <div class="opcoes">
+                <h2>Filmes</h2>
+                <label>Selecione o filme que você deseja assistir:</label></br>
+                <select id="filmes">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Mulher Maravilha</option>
+                    <option>Liga da Justiça</option>
+                    <option>Lanterna Verde</option>
+                    <option>Batman: O cavaleiro das trevas</option>
+                    <option>Batman vs Superman</option>
+                    <option>Homem de Aço</option>
+                    <option>Zack Snyder's Justice league</option>
+                    <option>Watchmen</option>
+                    <option>Vingadores: Era de Ultron</option>
+                    <option></option>
+                </select>    
+            </div>
+
+            <div class="field">
+            <label>Escolha a data que você deseja assistir: </label></br>
+                <input type="date" name="date">
+            </div>
+
+            <div class="field">
+            <label>Escolha o horário de sua preferência: </label></br>
+                <input type="time" name="hour">
+            </div>
+
+            <div class="field">
+                <label>Nome:</label></br>
+                <input type="text" name="name" placeholder="Digite seu nome completo aqui">
+            </div>
+
+
+            <div class="field">
+                <label>E-mail:</label><br>
+                <input type="e-mail" name="email" placeholder="Digite seu e-mail">
+            <div>
+            
+           <div class="field">
+               <label>Telefone para contato:</label></br>
+               <input type="number" name="telefone" placeholder="apenas números">
+           </div>
+           
+            <button onclick="window.alert('Seu filme foi agendado com sucesso!')">Enviar!</button>
+        
+        </form>  
+         
+    </div>    
+    
+    
+
+
+
+
+
+</body>
+</html>
